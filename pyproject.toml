@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "linkagent"
+version = "0.1.0"
+description = "Automated job application assistant"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic-settings>=2.0",
+  "playwright>=1.50.0",
+  "pyyaml>=6.0.3",
+  "openai>=2.44.0",
+  "python-dotenv>=1.2.2",
+  "redis>=5.0.0",
+  "docx2pdf>=0.1.8",
+  "python-docx>=1.2.0",
+  "streamlit>=1.25.0",
+  "fastapi>=0.140.0",
+  "uvicorn>=0.51.0",
+]
+optional-dependencies = { dev = [
+  "ruff>=0.0.283",
+  "mypy>=1.5",
+  "pytest>=8.4",
+  "pytest-playwright>=0.4",
+] }
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = [".git", "__pycache__", ".venv", "build", "dist", "uv.lock"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+namespace_packages = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

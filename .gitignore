@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+venv/
+ENV/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Test
+.pytest_cache/
+
+# Playwright
+playwright-report/
+
+# UV lock
+uv.lock
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+data/Resume.docx
+data/Resume.pdf
+data/browser_profile/
+node_modules/

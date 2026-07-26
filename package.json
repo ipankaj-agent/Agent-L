@@ -1,0 +1,12 @@
+{
+  "name": "linkagent-ui",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "http-server src/linkagent/ui -p 8000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.6.3"
+  }
+}

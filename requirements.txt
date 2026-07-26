@@ -1,0 +1,1 @@
+# Use uv and pyproject.toml for dependency management.
